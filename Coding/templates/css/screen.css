@@ -1,0 +1,1226 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+/* rajdhani-500 - latin */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/rajdhani-v8-latin-500.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* rajdhani-700 - latin */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/rajdhani-v8-latin-700.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v19-latin-700.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+  Generic: Page
+  ---
+  Global page styles + universal box-sizing:
+*/
+
+html {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+  color: #232226;
+  background-color: #f0f0f2;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Customize the background color to match your design.
+*/
+
+::-moz-selection {
+  background: #7d73c3;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #7d73c3;
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+/*
+  Elements: Images
+  ---
+  Default markup for images to make them responsive
+*/
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  margin: 0 0 24px;
+}
+
+/*
+  Elements: typography
+  ---
+  Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3,
+h6 {
+  font-family: 'Rajdhani', Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 56px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+h4 {
+  font-family: 'Rajdhani', Helvetica, arial, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 16px;
+}
+
+h5 {
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #b7b5bf;
+  margin: 0 0 24px;
+}
+
+a {
+  color: #232226;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+a:visited,
+a:active,
+a:hover,
+a:focus {
+  color: #7d73c3;
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/*
+  Objects: Row
+  ---
+  Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+  overflow: auto;
+  position: relative;
+  padding: 24px 24px 0;
+}
+
+/* size modifiers */
+
+.o-row--sm {
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+
+.o-row--md {
+  overflow: auto;
+  position: relative;
+  padding: 56px 24px;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .o-row--lg {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .o-row--lg {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .o-row {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .o-row--lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/*
+  Objects: Container
+  ---
+  Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 71em;
+}
+
+/*
+  Objects: section
+  ---
+  Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+  overflow-x: hidden;
+}
+
+.o-section + .o-section {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .o-section--xl + .o-section--xl {
+    margin-top: 72px;
+  }
+}
+
+/*
+  Objects: Layout
+  ---
+  The layout object provides us with a column-style layout system. This object
+  contains the basic structural elements, but classes should be complemented
+  with width utilities
+*/
+
+.o-layout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flew;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  width: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+  margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+  margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+  padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+  margin: 0 -16px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+  padding: 0 16px;
+}
+
+.o-layout--gutter-xl {
+  margin: 0 -24px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+  padding: 0 24px;
+}
+
+@media (min-width: 1440px) {
+  .o-layout--gutter-xl {
+    margin: 0 -48px;
+  }
+
+  .o-layout--gutter-xl > .o-layout__item {
+    padding: 0 48px;
+  }
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+/*
+  Objects: List
+  ---
+  Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+
+.c-small-menu {
+  display: block;
+  background-color: white;
+}
+
+@media (min-width: 992px) {
+  .c-small-menu {
+    display: none;
+  }
+}
+
+.c-large-menu {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .c-large-menu {
+    display: block;
+    background-color: white;
+  }
+}
+
+/*
+  Component: Dropdown
+  ---
+  Dropdown in the header
+*/
+
+.c-dropdown {
+  display: none;
+  min-width: 100%;
+  padding-bottom: 24px;
+}
+
+.c-dropdown-show {
+  display: block;
+}
+
+.c-dropdown a {
+  color: #232226;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: block;
+}
+
+.c-dropdown a:hover {
+  background-color: #f0f0f2;
+}
+
+@media (min-width: 768px) {
+  .c-dropdown a {
+    padding: 12px 48px;
+  }
+}
+
+/*
+  Component: Side nav
+  ---
+  Side navbar
+*/
+
+.c-side-nav {
+  height: 100%;
+  width: 256px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding: 16px 24px 0;
+}
+
+.c-side-nav a {
+  padding: 48px 0 0;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  color: #232226;
+  margin-bottom: 0 0 48px;
+}
+
+.c-side-nav a:hover {
+  color: #7d73c3;
+}
+
+.c-side-nav img {
+  display: block;
+  height: 80px;
+  border-radius: 50%;
+  margin: 48px auto 16px;
+}
+
+.c-side-nav__page {
+  padding: 48px 0;
+}
+
+/*
+  Component: Main
+  ---
+  Main content of the website
+*/
+@media (min-width: 992px) {
+  .c-main {
+    margin-left: 256px;
+  }
+}
+
+/*
+  Component: Body background
+  ---
+  A img background for the body
+*/
+
+.c-img-background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/img/jpg/USPSCar.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+/*
+  Component: Main
+  ---
+  Main content of the website
+*/
+.c-subheader {
+  height: 48px;
+}
+
+@media (min-width: 768px) {
+  .c-subheader {
+    height: 64px;
+  }
+}
+
+@media (min-width: 992px) {
+  .c-subheader {
+    height: 96px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-subheader {
+    height: 128px;
+  }
+}
+
+/*
+  Component: Widget
+  ---
+  Widgets of the website
+*/
+
+.c-widget {
+  background-color: white;
+  margin-bottom: 32px;
+}
+
+.c-widget__header {
+  padding: 16px 24px 0;
+}
+
+.c-widget__content {
+  padding: 16px 24px;
+}
+
+.c-widget__graph {
+  padding: 16px 8px;
+  height: 40vh;
+}
+
+.c-widget__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.c-widget__text {
+  margin: 0 0 8px;
+}
+
+@media (min-width: 992px) {
+  .c-widget__content {
+    padding: 32px 24px;
+  }
+
+  .c-widget__graph {
+    padding: 32px 24px;
+  }
+}
+
+/*
+  Component: Login
+  ---
+  Login pannel
+*/
+
+.c-login {
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  margin-top: 20vh;
+}
+
+.c-login__input {
+  border: none;
+  border-bottom: 1px solid #232226;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 4px 8px;
+  margin: 0 0 24px;
+}
+
+/*
+  Component: Lead
+  ---
+  Different lettertypes and fonts
+*/
+
+.c-lead {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.c-lead-title {
+  margin-bottom: 8px;
+}
+
+.c-lead-subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.c-lead-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+
+/*
+  Component: CTA link
+  ---
+  Small cta link with custom animation
+*/
+
+.c-link-cta {
+  text-decoration: none;
+  background-color: #7d73c3;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  padding: 4px 24px;
+  border-radius: 40px;
+  margin: 0 0 24px;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+  color: white;
+}
+
+.c-link-cta:hover {
+  color: white;
+  background-color: #5a528c;
+}
+
+.c-link-cta-lg {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 12px 48px;
+}
+
+/*
+  Component: Icon
+  ---
+  Settings for the icons
+*/
+
+.c-icon {
+  margin-right: 32px;
+}
+
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+/*
+    Utilities: text alignment
+    ---
+    Utility classes to put specific text alignment onto elements
+*/
+
+.u-text-align-center {
+  text-align: center;
+}
+
+.u-text-align-left {
+  text-align: left;
+}
+
+.u-text-align-right {
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  .u-text-align-center-bp1 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp1 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp1 {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .u-text-align-center-bp2 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp2 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp2 {
+    text-align: right;
+  }
+}
+
+@media (max-width: 992px) {
+  .u-text-align-center-bp3 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp3 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp3 {
+    text-align: right;
+  }
+}
+
+/*
+  Utilities: box shadow
+  ---
+  Utility classes to put specific shadows onto elements
+*/
+
+.u-box-shadow-top {
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.u-box-shadow-bottom {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.u-box-shadow-right {
+  box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.u-box-shadow-left {
+  box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.u-box-shadow-top-bottom {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+/*
+  Utilities: Color
+  ---
+  Utility classes to put specific colors onto elements
+*/
+
+.u-light_background {
+  background-color: white;
+}
+
+/*
+  Utilities: Line
+  ---
+  Utility classes to put a specific line onto elements
+*/
+
+.u-nav-line {
+  margin: 0 -24px;
+}
+
+.u-widget-line {
+  margin: 0;
+}
+
+/*
+  Utilities: spacing
+  ---
+  Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+/*
+  Utilities: max-width
+  ---
+  Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+  max-width: 18em !important;
+}
+
+.u-max-width-sm {
+  max-width: 32em !important;
+}
+
+.u-max-width-md {
+  max-width: 42em !important;
+}
+
+.u-max-width-lg {
+  max-width: 60em !important;
+}
+
+.u-max-width-xl {
+  max-width: 70em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+  Utility: Widths
+  ---
+  Utility classes to put specific widths onto elements
+  Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+  width: auto !important;
+}
+
+.u-1-of-2 {
+  width: 50% !important;
+}
+
+.u-1-of-3 {
+  width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+  width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+  width: 25% !important;
+}
+
+.u-3-of-4 {
+  width: 75% !important;
+}
+
+.u-1-of-5 {
+  width: 20% !important;
+}
+
+.u-2-of-5 {
+  width: 40% !important;
+}
+
+.u-3-of-5 {
+  width: 60% !important;
+}
+
+.u-4-of-5 {
+  width: 80% !important;
+}
+
+.u-1-of-6 {
+  width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+  width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp1 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp1 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp1 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp1 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp1 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp1 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp1 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp1 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp1 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp1 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp2 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp2 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp2 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp2 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp2 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp2 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp2 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp2 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp2 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp2 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp3 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp3 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp3 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .u-1-of-2-bp4 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp4 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp4 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp4 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp4 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp4 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp4 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp4 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp4 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp4 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp4 {
+    width: 83.3333333333% !important;
+  }
+}
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+/*
+  Media Queries
+  ---
+  EXAMPLE Media Queries for Responsive Design.
+  These examples override the primary ('mobile first') styles.
+  USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+ No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+  Print styles.
+  ---
+  Inlined to avoid the additional HTTP request:
+  http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                 http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

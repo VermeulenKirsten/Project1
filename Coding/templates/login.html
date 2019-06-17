@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SmartPost</title>
+    <meta name="description" content="This is my first project in my bachelor's degree New Media and Communication Technology" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
+    <script src="script/dataHandler.js"></script>
+  </head>
+
+  <body class="js-login c-img-background">
+    <div class="o-layout o-layout--justify-center">
+      <div class="o-layout__item c-login u-text-align-center">
+        <div class="o-row--md">
+          <h1 class="c-lead">SmartPost</h1>
+
+          <form class="js-form" action="" method="POST" onsubmit="return false">
+            <div class="o-layout">
+              <div class="o-layout__item">
+                <div>
+                  <label for="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                  </label>
+
+                  <input id="user" type="text" name="user" class="c-login__input" placeholder="Username" required />
+                </div>
+              </div>
+
+              <div class="o-layout__item">
+                <label for="pass">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                  </svg>
+                </label>
+
+                <input id="pass" type="password" name="pass" class="c-login__input" placeholder="Password" required />
+              </div>
+            </div>
+
+            <input type="submit" class="c-link-cta c-link-cta-lg u-box-shadow-bottom" value="Login" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

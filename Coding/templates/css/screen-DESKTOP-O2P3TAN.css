@@ -1,0 +1,1313 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+/* rajdhani-500 - latin */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/rajdhani-v8-latin-500.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* rajdhani-700 - latin */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/rajdhani-v8-latin-700.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v19-latin-700.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Roboto', Helvetica, arial, sans-serif;
+  color: #1F2626;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background: #7d73c3;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #7d73c3;
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Rajdhani', Helvetica, arial, sans-serif;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 56px;
+  margin: 0 0 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 8px 0 80px;
+  font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 0;
+  font-weight: 500;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
+}
+
+a {
+  color: #7d73c3;
+  transition: all 0.1s ease-in-out;
+}
+
+a:visited,
+a:active {
+  color: #5A528C;
+}
+
+a:hover,
+a:focus {
+  color: #5A528C;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+  position: relative;
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* color modifiers */
+
+.o-row--primary-x-light {
+  color: #1F2626;
+  background-color: #F0F2F2;
+}
+
+.o-row--neutral-xx-dark {
+  color: #fff;
+  background: #1F2626;
+}
+
+/* Image backgrounds  */
+
+.o-row--image-login {
+  background-image: url("/img/jpg/USPSCar.jpg");
+  background-size: cover;
+  background-position-y: 30%;
+  background-attachment: fixed;
+}
+
+/* Shadow modifiers */
+
+.o-row--bottom-shadow {
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+}
+
+.o-row--top-bottom-shadow {
+  box-shadow: 0px -3px 6px 0px rgba(0,0,0,0.16), 0px 3px 6px 0px rgba(0,0,0,0.16);
+}
+
+
+/* size modifiers */
+
+.o-row--sm {
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+
+.o-row--lg {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.o-row--xl {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .o-row--sm {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--lg {
+    padding: 80px 48px
+  }
+}
+
+@media (min-width: 992px) {
+  .o-row--xl {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+
+  .o-row--sm {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--lg {
+    padding: 80px 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .o-row {
+    padding: 32px 128px 0px;
+  }
+
+  .o-row--sm {
+    padding: 24px 128px;
+  }
+
+  .o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--lg {
+    padding: 80px 128px
+  }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 90em; /* 90 * 16px = 1440px */
+}
+@media (min-width: 1440px) {
+  .o-container--sm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 33.3333333333%; /* 90 * 16px = 1440px */
+  }
+}
+
+
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-section + .o-section {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .o-section--xl + .o-section--xl {
+    margin-top: 72px;
+  }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  width: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+  margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+  margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+  padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+  margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+  padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+  margin: 0 -48px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+  padding: 0 48px;
+}
+
+.o-layout--gutter-xxl {
+  margin: 0 -72px;
+}
+
+.o-layout--gutter-xxl > .o-layout__item {
+  padding: 0 72px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is more than one flex item */
+
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-header__nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .c-header__nav {
+    display: block;
+  }
+}
+
+/*
+    Component: Subheader
+    ---
+    Subheader of the website
+*/
+
+.c-subheader {
+  display: flex;
+  height: 48px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .c-subheader {
+    display: flex;
+    height: 48px;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .c-subheader {
+    display: flex;
+    height: 64px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-subheader {
+    display: flex;
+    height: 128px;
+    align-items: center;
+  }
+}
+
+/*
+    Component: Footer
+    ---
+    Footer of the website
+*/
+
+.c-footer {
+  display: flex;
+  height: 100%;
+  padding: 48px 48px;
+  align-items: center;
+}
+
+@media (min-width: 1440px) {
+  .c-footer {
+    padding: 48px 128px;
+  }
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.c-nav__link {
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 8px 0;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+  color: #afb3b1;
+}
+
+.c-nav__link:hover,
+.c-nav__link:focus {
+  color: #3ec18f;
+}
+
+@media (min-width: 992px) {
+  .c-nav__list {
+    display: flex;
+  }
+
+  .c-nav__item--cta {
+    margin-left: 20px;
+  }
+
+  .c-nav__link {
+    padding: 8px 16px;
+  }
+}
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-lead {
+  position: relative;
+}
+
+.c-lead--md {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.c-lead--lg {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+.c-lead--xl {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 24px 0 0;
+}
+
+@media (min-width: 768px) {
+  .c-lead--md {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .c-lead--lg {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .c-lead--xl {
+    font-size: 54px;
+    line-height: 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-lead--md {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .c-lead--lg {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .c-lead--xl {
+    font-size: 67px;
+    line-height: 72px;
+  }
+}
+
+/*
+    Component: Intro
+    ---
+    Intro part on the homepage
+*/
+
+.c-intro {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .c-intro__figure {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-intro {
+    margin-bottom: -96px;
+  }
+
+  .c-intro__body {
+    position: relative;
+    top: -48px;
+  }
+}
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 4px 32px;
+  border-radius: 40px;
+  border: none;
+  background: #7d73c3;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+  color: #fff;
+}
+
+.c-link-cta:hover,
+.c-link-cta:focus {
+  color: #fff;
+  background: #5A528C;
+}
+
+.c-link-cta:active {
+  background-color: #7d73c3;
+}
+
+.c-link-cta--login {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .c-link-cta--login {
+    display: inline-block;
+  }
+
+  .c-link-cta--lg {
+    font-size: 24px;
+    padding: 12px 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-link-cta--lg {
+    font-size: 24px;
+    padding: 16px 64px;
+  }
+}
+
+/*
+    Component: Login
+    ---
+    Loginpannel in the middel of the screen
+*/
+
+.c-login {
+  text-align: center;
+  background-color:rgba(255,255,255,0.8);
+  padding: 56px 0;
+  color: #1F2626;
+  border-radius: 30px;
+}
+
+.c-login__overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.c-login__input {
+  border: none;
+  border-bottom: 0.5px solid #1F2626;
+  padding: 8px 0;
+  background-color: rgba(255,255,255,0);
+}
+
+/*
+    Component: Login
+    ---
+    Loginpannel in the middel of the screen
+*/
+
+.c-icon {
+  display: block;
+}
+
+@media (min-width: 768px){
+
+  .c-icon {
+    display: none;
+  }
+
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: text alignment
+    ---
+    Utility classes to put specific text alignment onto elements
+*/
+
+.u-text-align-center {
+  text-align: center;
+}
+
+.u-text-align-left {
+  text-align: left;
+}
+
+.u-text-align-right {
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  .u-text-align-center-bp1 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp1 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp1 {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .u-text-align-center-bp2 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp2 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp2 {
+    text-align: right;
+  }
+}
+
+@media (max-width: 992px) {
+  .u-text-align-center-bp3 {
+    text-align: center;
+  }
+
+  .u-text-align-left-bp3 {
+    text-align: left;
+  }
+
+  .u-text-align-right-bp3 {
+    text-align: right;
+  }
+}
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral-base {
+  color: #9c9eb8;
+}
+
+.u-color-neutral-dark {
+  color: #83859e;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+.u-mb-xxl {
+  margin-bottom: 72px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+  max-width: 22em !important;
+}
+
+.u-max-width-sm {
+  max-width: 26em !important;
+}
+
+.u-max-width-md {
+  max-width: 36em !important;
+}
+
+.u-max-width-lg {
+  max-width: 50em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+  width: auto !important;
+}
+
+.u-1-of-2 {
+  width: 50% !important;
+}
+
+.u-1-of-3 {
+  width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+  width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+  width: 25% !important;
+}
+
+.u-3-of-4 {
+  width: 75% !important;
+}
+
+.u-1-of-5 {
+  width: 20% !important;
+}
+
+.u-2-of-5 {
+  width: 40% !important;
+}
+
+.u-3-of-5 {
+  width: 60% !important;
+}
+
+.u-4-of-5 {
+  width: 80% !important;
+}
+
+.u-1-of-6 {
+  width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+  width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp1 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp1 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp1 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp1 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp1 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp1 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp1 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp1 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp1 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp1 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp2 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp2 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp2 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp2 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp2 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp2 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp2 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp2 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp2 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp2 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp3 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp3 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp3 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .u-1-of-2-bp4 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp4 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp4 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp4 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp4 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp4 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp4 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp4 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp4 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp4 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp4 {
+    width: 83.3333333333% !important;
+  }
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

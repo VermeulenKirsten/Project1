@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SmartPost</title>
+    <meta name="description" content="This is my first project in my bachelor's degree New Media and Communication Technology" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js" integrity="sha256-vyehT44mCOPZg7SbqfOZ0HNYXjPKgBCaqxBkW3lh6bg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
+    <script src="script/dataHandler.js"></script>
+  </head>
+
+  <body class="js-lockers">
+    <header>
+      <div class="c-small-menu u-box-shadow-bottom">
+        <div class="o-row">
+          <div class="o-container">
+            <div class="o-layout">
+              <svg class="c-icon js-dropdown" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
+              <h3>Lockers</h3>
+            </div>
+          </div>
+        </div>
+        <div class="c-dropdown js-menu">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="lockers.html">Lockers</a>
+          <a href="history.html">History</a>
+          <a href="index.html">Afmelden</a>
+        </div>
+      </div>
+      <div class="c-large-menu c-side-nav u-box-shadow-right u-text-align-center">
+        <h4 class="">SmartPost</h4>
+        <hr class="u-nav-line" />
+
+        <img src="img/jpg/user.jpg" alt="User" />
+        <h5 class="">Kirsten Vermeulen</h5>
+
+        <div class="c-side-nav__page">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="lockers.html">Lockers</a>
+          <a href="history.html">History</a>
+        </div>
+
+        <a href="index.html">Afmelden</a>
+      </div>
+    </header>
+
+    <section class="u-light-background">
+      <div class="c-main">
+        <div class="o-row">
+          <div class="o-layout o-layout--gutter-lg js-locker-html">
+
+            <div class="o-layout__item u-1-of-2-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>Locker 1</h6>
+                </div>
+                <hr class="u-widget-line" />
+                <div class="c-widget__content">
+                  <div class="o-layout">
+                    <div class="o-layout__item u-2-of-3">
+                      <p class="c-widget__text">Status:</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">In use</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-2-of-3">
+                      <p>Date of commissioning:</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p>01/01/2019</p>
+                    </div>
+                  </div>
+
+                  <p class="c-widget__title">Owner:</p>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">Name:</p>
+                    </div>
+                    <div class="o-layout__item u-2-of-3 u-text-align-right">
+                      <p class="c-widget__text">Kirsten Vermeulen</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">Address:</p>
+                    </div>
+                    <div class="o-layout__item u-2-of-3 u-text-align-right">
+                      <p class="c-widget__text">Kaleshoekstraat 3</p>
+                      <p class="c-widget__text">8020 Ruddervoorde</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3-bp1">
+                      <p class="c-widget__text">E-mail:</p>
+                    </div>
+                    <div class="o-layout__item u-2-of-3-bp1 u-text-align-right u-text-align-left-bp1">
+                      <p>kirsten.vermeulen@student.howest.be</p>
+                    </div>
+                  </div>
+
+                  <a class="c-link-cta u-box-shadow-bottom" href="#">Open</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="o-layout__item u-1-of-2-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>Locker 2</h6>
+                </div>
+
+                <hr class="u-widget-line" />
+
+                <div class="c-widget__content">
+                  <div class="o-layout">
+                    <div class="o-layout__item u-2-of-3">
+                      <p class="">Status:</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Empty</p>
+                    </div>
+                  </div>
+
+                  <a class="c-link-cta u-box-shadow-bottom" href="#">Open</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

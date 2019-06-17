@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SmartPost</title>
+    <meta name="description" content="This is my first project in my bachelor's degree New Media and Communication Technology" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js" integrity="sha256-vyehT44mCOPZg7SbqfOZ0HNYXjPKgBCaqxBkW3lh6bg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+    <script src="script/script.js"></script>
+    <script src="script/dataHandler.js"></script>
+  </head>
+
+  <body class="js-dashboard">
+    <header>
+      <div class="c-small-menu u-box-shadow-bottom">
+        <div class="o-row">
+          <div class="o-container">
+            <div class="o-layout">
+              <svg class="c-icon js-dropdown" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
+              <h3>Dashboard</h3>
+            </div>
+          </div>
+        </div>
+        <div class="c-dropdown js-menu">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="lockers.html">Lockers</a>
+          <a href="history.html">History</a>
+          <a href="index.html">Afmelden</a>
+        </div>
+      </div>
+      <div class="c-large-menu c-side-nav u-box-shadow-right u-text-align-center">
+        <h4 class="">SmartPost</h4>
+        <hr class="u-nav-line" />
+
+        <img src="img/jpg/user.jpg" alt="User" />
+        <h5 class="">Kirsten Vermeulen</h5>
+
+        <div class="c-side-nav__page">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="lockers.html">Lockers</a>
+          <a href="history.html">History</a>
+        </div>
+
+        <a href="index.html">Afmelden</a>
+      </div>
+    </header>
+
+    <section class="u-light-background">
+      <div class="c-main">
+        <div class="o-row">
+          <div class="o-layout o-layout--gutter-lg">
+            <div class="o-layout__item u-2-of-3-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>Overview deliveries / collections</h6>
+                </div>
+                <hr class="u-widget-line" />
+                <div class="c-widget__graph">
+                  <canvas id="bars" width="100" height="100"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="o-layout__item u-1-of-3-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>recent events</h6>
+                </div>
+                <hr class="u-widget-line" />
+                <div class="c-widget__content js-dashboard-recent-events">
+                  <div class="o-layout c-widget__title">
+                    <div class="o-layout__item u-1-of-3">
+                      <p>Date</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p>Hour</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p>Action</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-3">
+                      <p class="c-widget__text">01/01/2019</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-center">
+                      <p class="c-widget__text">13u12</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-3 u-text-align-right">
+                      <p class="c-widget__text">Open</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="o-layout__item u-1-of-3-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>Lockers</h6>
+                </div>
+                <hr class="u-widget-line" />
+
+                <div class="c-widget__content js-dashboard-lockers">
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-2">
+                      <p class="c-widget__title">Locker 1</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-2 u-text-align-right">
+                      <a class="c-link-cta u-box-shadow-bottom" href="#">Open</a>
+                    </div>
+                  </div>
+                  <p>In use</p>
+
+                  <div class="o-layout">
+                    <div class="o-layout__item u-1-of-2">
+                      <p class="c-widget__title">Locker 2</p>
+                    </div>
+                    <div class="o-layout__item u-1-of-2 u-text-align-right">
+                      <a class="c-link-cta u-box-shadow-bottom" href="#">Open</a>
+                    </div>
+                  </div>
+                  <p>Empty</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="o-layout__item u-2-of-3-bp4">
+              <div class="c-widget u-box-shadow-bottom">
+                <div class="c-widget__header">
+                  <h6>Overview of the busiest moments</h6>
+                </div>
+                <hr class="u-widget-line" />
+                <div class="c-widget__graph">
+                  <canvas id="donut"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
