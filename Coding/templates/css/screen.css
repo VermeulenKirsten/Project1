@@ -759,6 +759,10 @@ a:focus {
     Utility classes to put specific text alignment onto elements
 */
 
+.u-disabled {
+  display: none;
+}
+
 .u-text-align-center {
   text-align: center;
 }
@@ -847,6 +851,9 @@ a:focus {
 
 .u-light_background {
   background-color: white;
+}
+.u-error-red {
+  color: #D8000C
 }
 
 /*

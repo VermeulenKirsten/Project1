@@ -23,7 +23,7 @@ import random
 try:
 
     # App settings
-    #sleep(90)
+    # sleep(90)
 
     app = Flask(__name__)
     CORS(app)
@@ -80,7 +80,7 @@ try:
 
 
     def print_ip():
-        ip = ips[0].strip('b\'')
+        ip = ips[1].strip('b\'')
 
         # Print IP-address
         lcddisplay.clear_LCD()
@@ -462,15 +462,39 @@ try:
 
     @socketio.on("open_locker")
     def connecting(locker):
-       if locker == '1':
+
+       info = conn.get_data("SELECT * FROM locker where lockerID = %s", locker)
+
+       if locker == '1' and info[0]['status'] == 0:
+           ledstrip.green()
            lock1.open_lock()
            sleep(2)
            lock1.close_lock()
-       elif locker == '2':
+           ledstrip.white()
+       elif locker == '1' and info[0]['status'] == 1:
+           ledstrip.red()
+           lcddisplay.clear_LCD()
+           lcddisplay.write_message('This locker is')
+           lcddisplay.second_row()
+           lcddisplay.write_message('occupied!')
+           sleep(2)
+           ledstrip.white()
+           print_ip()
+       elif locker == '2' and info[0]['status'] == 0:
+           ledstrip.green()
            lock2.open_lock()
            sleep(2)
            lock2.close_lock()
-
+           ledstrip.white()
+       elif locker == '2' and info[0]['status'] == 1:
+           ledstrip.red()
+           lcddisplay.clear_LCD()
+           lcddisplay.write_message('This locker is')
+           lcddisplay.second_row()
+           lcddisplay.write_message('occupied!')
+           sleep(2)
+           ledstrip.white()
+           print_ip()
 
     if __name__ == '__main__':
         setup()

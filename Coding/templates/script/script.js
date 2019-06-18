@@ -428,6 +428,10 @@ const show_dashboard_recent_events = function(data) {
   document.querySelector('.js-dashboard-recent-events').innerHTML = html;
 };
 
+const show_wrong_password = function() {
+  document.querySelector('.js-wrong').classList.remove('u-disabled');
+};
+
 //#endregion
 
 //#region ***********  Callback - (After update/delete/insert) ***********
@@ -438,6 +442,8 @@ const callback_login = function(data) {
   if (data['length'] > 0) {
     localStorage.setItem('wachtwoord', data[0]['wachtwoord']);
     window.location.replace('dashboard.html');
+  } else {
+    show_wrong_password();
   }
 };
 
